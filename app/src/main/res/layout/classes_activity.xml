@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/signinBlue"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/signinBlue"
+        >
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:gravity="center|right"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_icon_white"
+            android:scaleType="centerCrop"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/large_text"
+            />
+
+        <TextView
+            android:id="@+id/lblHello"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/large_text2"
+            android:text="Hello"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:gravity="center|right"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logout_icon"
+            android:scaleType="centerCrop"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/large_text"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text2"
+        android:layout_marginTop="-10dp"
+        android:text="(nurse)"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/lblChooseAClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text"
+        android:text="Choose a class"
+        android:layout_marginTop="@dimen/app_margin"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_below="@+id/lblName"
+        android:layout_centerHorizontal="true"
+        />
+
+    <GridView
+        android:id="@+id/gridViewClasses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="150dp"
+        android:layout_below="@+id/lblChooseAClass"
+        android:numColumns="auto_fit"
+        android:paddingTop="15dp"
+        android:verticalSpacing="15dp"
+        android:stretchMode="spacingWidthUniform"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        />
+
+</RelativeLayout>

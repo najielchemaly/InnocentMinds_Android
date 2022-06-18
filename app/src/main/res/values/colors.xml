@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0e30dd</color>
+    <color name="colorPrimaryDark">#0e30dd</color>
+    <color name="colorAccent">#0e30dd</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whiteOpacity">#39ffffff</color>
+    <color name="blackOpacity">#dc040e23</color>
+    <color name="black">#000000</color>
+    <color name="grey">#EFEBEA</color>
+    <color name="greydialogue">#d0cdcc</color>
+    <color name="appBlue">#0e30dd</color>
+    <color name="signinBlue">#22B8EC</color>
+    <color name="darkBlue">#071a7b</color>
+    <color name="darkBlueOpacity">#9a071a7b</color>
+    <color name="red">#E71F2B</color>
+    <color name="darkText">#616b9a</color>
+    <color name="lightText">#adb3d3</color>
+    <color name="orange">#F6B21F</color>
+    <color name="yellowDialogue">#C8D432</color>
+    <color name="blackOpacityNew">#ae040e23</color>
+    <color name="blackOpacityImage">#5f040e23</color>
+    <color name="purple">#8c65db</color>
+    <color name="green">#3fda14</color>
+    <color name="greenAboutUs">#c7d633</color>
+    <color name="darkGrey">#434343</color>
+    <color name="lightGrey">#9a9a9a</color>
+</resources>

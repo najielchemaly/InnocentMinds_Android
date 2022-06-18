@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/signinBlue">
+
+        <TextView
+            android:id="@+id/lblPaymentTitle"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/payments_and_fees"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/viewFees"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_below="@+id/viewHeader"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPayments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/border_grey_rec_left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text2"
+            android:text="@string/payments"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btnFees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/border_white_rec_right"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text2"
+            android:text="@string/fees"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstPayments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewFees"
+        android:layout_marginBottom="50dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:paddingTop="@dimen/app_margin"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/signinBlue"
+        >
+
+        <TextView
+            android:id="@+id/lblTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text2"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:text="Total"
+            />
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/app_margin"
+            android:text="1,350$"
+            />
+
+    </RelativeLayout>
+
+    <apploads.com.innocentminds.helpers.LoadingIndicator
+        android:id="@+id/indicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="BallScaleIndicator"
+            app:indicatorColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </apploads.com.innocentminds.helpers.LoadingIndicator>
+
+</RelativeLayout>

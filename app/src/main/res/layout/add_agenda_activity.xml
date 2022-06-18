@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/register_background"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/imgAddActivity"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/app_margin"
+        android:src="@drawable/add_activity_icon"
+        android:padding="5dp"
+        />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:text="Cancel"
+        android:textSize="@dimen/medium_text"
+        />
+
+    <TextView
+        android:id="@+id/lblAddActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text2"
+        android:textColor="@color/white"
+        android:text="Add additional activity"
+        android:layout_below="@+id/imgAddActivity"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/viewButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:background="@drawable/border_white_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:lines="1"
+            android:textSize="@dimen/medium_text"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:hint="Title of activity"
+            />
+
+        <TextView
+            android:id="@+id/lblSelectStudent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:textSize="@dimen/medium_text"
+            android:background="@drawable/border_white_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:lines="1"
+            android:layout_marginTop="10dp"
+            android:text="Select students"
+            />
+
+        <TextView
+            android:id="@+id/lblAddImages"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:textSize="@dimen/medium_text"
+            android:background="@drawable/border_white_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:lines="1"
+            android:layout_marginTop="10dp"
+            android:text="+ Add images"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/viewImages"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/viewButtons"
+        android:layout_marginTop="@dimen/app_margin"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@color/grey">
+
+            <ImageView
+                android:id="@+id/imgPicked"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_margin="3dp"
+                />
+
+            <TextView
+                android:id="@+id/txtImageCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blackOpacityImage"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text2"
+                android:layout_margin="3dp"
+                />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/imgAddImages"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@color/grey"
+            android:src="@drawable/plus_black_icon"
+            android:scaleType="centerCrop"
+            android:padding="30dp"
+            android:layout_marginLeft="5dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border_white_rec"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginBottom="@dimen/app_margin"
+        android:textAllCaps="false"
+        android:textSize="@dimen/medium_text2"
+        android:textColor="@color/signinBlue"
+        android:text="Save"
+        />
+
+</RelativeLayout>

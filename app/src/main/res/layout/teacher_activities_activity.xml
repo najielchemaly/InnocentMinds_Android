@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/register_background"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:background="@android:color/transparent"
+        android:src="@drawable/arrow_blue"
+        android:tint="@color/white"
+        android:scaleType="centerCrop"
+        android:padding="12dp"
+        android:rotation="180"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewNoActivity"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/btnBack"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="15dp"
+        android:visibility="gone"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtNoActivityTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:textSize="@dimen/medium_text2"
+                android:textColor="@color/black"
+                android:text="No additional activities yet"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/txtNoActivityDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_centerInParent="true"
+                android:lines="2"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/black"
+                android:text="You haven't logged any additional activities for this student today"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btnNoActivityAdd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:textColor="@color/signinBlue"
+                android:textAllCaps="false"
+                android:text="Add"
+                android:textSize="@dimen/medium_text2"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewAddActivity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnBack"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="@dimen/app_margin"
+        app:cardElevation="5dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/viewNewActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:src="@drawable/plus_filled_blue"
+                android:scaleType="centerCrop"
+                android:padding="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add additional activity"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/darkBlue"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/lstAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewAddActivity"
+        />
+
+</RelativeLayout>

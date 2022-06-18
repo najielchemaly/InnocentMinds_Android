@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:cardCornerRadius="25dp"
+        android:layout_margin="7dp"
+        android:backgroundTint="@color/white"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        app:cardElevation="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgClass"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/class_icon"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:padding="15dp"
+                android:layout_margin="3dp"
+                />
+
+            <TextView
+                android:id="@+id/lblClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text2"
+                android:textColor="@color/darkGrey"
+                android:text="class b"
+                android:layout_marginTop="@dimen/app_margin"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

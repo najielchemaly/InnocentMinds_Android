@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/signinBlue"
+        >
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/large_text2"
+            android:text="Amal wakim (nurse)"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:gravity="center|right"
+            android:src="@drawable/arrow_blue"
+            android:tint="@color/white"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/app_margin"
+            android:rotation="180"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/large_text"
+            android:text="Close"
+            />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lstChild"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/signinBlue"
+        >
+
+        <TextView
+            android:id="@+id/lblName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/large_text2"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:gravity="center|right"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logout_icon"
+            android:scaleType="centerCrop"
+            android:padding="7dp"
+            android:layout_marginRight="@dimen/app_margin"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/large_text"
+            android:text="Close"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewActivities"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="@dimen/app_margin">
+
+        <ImageView
+            android:id="@+id/imgClass"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:src="@drawable/class_icon"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:padding="7dp"/>
+
+        <TextView
+            android:id="@+id/lblAssignTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imgClass"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/medium_text"
+            android:text="Assigned to"
+            />
+
+        <Button
+            android:id="@+id/btnAdditionalActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:gravity="right|center"
+            android:textColor="@color/signinBlue"
+            android:textAllCaps="false"
+            android:text="View additional activities"
+            android:layout_marginRight="@dimen/app_margin"
+            android:textSize="@dimen/small_text"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.2"
+            android:background="@color/blackOpacityNew" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lstChildren"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewActivities"
+        android:layout_marginBottom="70dp"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_green_view"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginBottom="@dimen/app_margin"
+        android:textSize="@dimen/medium_text"
+        android:textAllCaps="false"
+        android:text="Confirm and Submit"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>

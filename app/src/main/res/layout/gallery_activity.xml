@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/signinBlue"
+        >
+
+        <TextView
+            android:id="@+id/lblGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/xlarge_text"
+            android:text="@string/see_some_images"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:gravity="center|right"
+            android:layout_marginRight="@dimen/app_margin"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/large_text"
+            android:text="@string/close"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gallery_background"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/header"
+        />
+
+    <GridView
+        android:id="@+id/galleryView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="150dp"
+        android:layout_below="@+id/header"
+        android:numColumns="auto_fit"
+        android:paddingTop="15dp"
+        android:verticalSpacing="15dp"
+        android:stretchMode="spacingWidthUniform"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/viewImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/image"
+            >
+
+            <TextView
+                android:id="@+id/lblShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:id="@+id/imgFacebook"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:src="@drawable/facebook_icon"
+                />
+
+            <ImageView
+                android:id="@+id/imgInsta"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:src="@drawable/instagram_icon"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCloseImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/medium_text2"
+            android:text="Close"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

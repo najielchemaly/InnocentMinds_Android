@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "223209791284",
+    "firebase_url": "https://innocentminds-bec09.firebaseio.com",
+    "project_id": "innocentminds-bec09",
+    "storage_bucket": "innocentminds-bec09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223209791284:android:d09443733dbef18b",
+        "android_client_info": {
+          "package_name": "apploads.com.innocentminds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223209791284-l46iq82a05fm9sc1idl71ko6b1cjhu91.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "apploads.com.innocentminds",
+            "certificate_hash": "8ea91a39ced55d92453e557e800b40842d5f51ef"
+          }
+        },
+        {
+          "client_id": "223209791284-k3277fhii262g8r4fqs96qe7a55qed8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0vYT62H8p9OVG6J1jC8WTsHX13S9gDiQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223209791284-k3277fhii262g8r4fqs96qe7a55qed8l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "223209791284-iakgc30hbfcils1oauu39qde0t1knm9s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.infosys.innocentminds",
+                "app_store_id": "1433882473"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223209791284:android:ea23a30774d594ee",
+        "android_client_info": {
+          "package_name": "com.infosys.innocentminds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223209791284-k3277fhii262g8r4fqs96qe7a55qed8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0vYT62H8p9OVG6J1jC8WTsHX13S9gDiQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+<tabs>
+    <tab
+        id="@+id/about_us"
+        title="About us" />
+    <tab
+        id="@+id/contact_us"
+        title="Contact us" />
+</tabs>

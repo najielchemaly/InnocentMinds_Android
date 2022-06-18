@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/edit_profile_background" />
+
+    <TextView
+        android:id="@+id/lblHabits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/app_margin"
+        android:text="@string/habits"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xlarge_text" />
+
+
+    <LinearLayout
+        android:id="@+id/step1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblHabits"
+        android:layout_marginTop="@dimen/app_margin"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginTop="@dimen/app_margin"
+            android:background="@drawable/border_white_transparent_button">
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/spinnerSleepHabit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:text="@string/sleep_habit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text2"
+                app:arrowTint="@color/white"
+                app:backgroundSelector="@color/red"
+                app:textTint="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginTop="@dimen/app_margin"
+            android:background="@drawable/border_white_transparent_button">
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/spinnerEatingHabit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:text="@string/eating_habit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text2"
+                app:arrowTint="@color/white"
+                app:backgroundSelector="@color/red"
+                app:textTint="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginTop="@dimen/app_margin"
+            android:background="@drawable/border_white_transparent_button">
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/spinnerClean"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:text="@string/clean"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text2"
+                app:arrowTint="@color/white"
+                app:backgroundSelector="@color/red"
+                app:textTint="@color/white" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/txtdesc"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginTop="@dimen/app_margin"
+            android:background="@drawable/border_white_transparent_button"
+            android:gravity="top|center"
+            android:hint="Doudou, Tetine, Etc..."
+            android:lines="4"
+            android:maxLines="4"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginTop="@dimen/app_margin"
+            android:background="@drawable/border_white_transparent_button">
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/spinnerCharacter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:text="@string/character"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text2"
+                app:arrowTint="@color/white"
+                app:backgroundSelector="@color/red"
+                app:textTint="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/btnCancel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@drawable/border_white_rec"
+        android:text="@string/finish"
+        android:textAllCaps="false"
+        android:textColor="@color/red" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/btnCancel"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:background="@android:color/transparent"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <apploads.com.innocentminds.helpers.LoadingIndicator
+        android:id="@+id/indicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="BallScaleIndicator"
+            app:indicatorColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </apploads.com.innocentminds.helpers.LoadingIndicator>
+
+</RelativeLayout>

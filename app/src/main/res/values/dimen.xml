@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_margin">15dp</dimen>
+    <dimen name="xsmall_text">10sp</dimen>
+    <dimen name="small_text">12sp</dimen>
+    <dimen name="medium_text">14sp</dimen>
+    <dimen name="medium_text2">17sp</dimen>
+    <dimen name="large_text">18sp</dimen>
+    <dimen name="large_text2">22sp</dimen>
+    <dimen name="xlarge_text">28sp</dimen>
+    <dimen name="xxlarge_text">32sp</dimen>
+</resources>

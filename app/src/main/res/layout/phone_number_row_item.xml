@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/viewParent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/number_view_green">
+
+        <TextView
+            android:id="@+id/txtNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:text="01 360 026"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text2" />
+
+        <Button
+            android:id="@+id/btnCallus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/app_margin"
+            android:text="Call now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text2"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

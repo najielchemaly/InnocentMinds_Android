@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/lblSendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/large_text"
+        android:textColor="@color/white"
+        android:text="Send a message"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/lblSelectMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text"
+        android:textColor="@color/white"
+        android:text="Select which message you would like to send to the parent"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lblSendMessage"
+        />
+
+    <ListView
+        android:id="@+id/lstMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lblSelectMessage"
+        android:layout_above="@+id/btnSend"
+        android:divider="@null"
+        android:paddingBottom="@dimen/app_margin"
+        android:dividerHeight="0dp"
+        />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:text="Close"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnClose"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@drawable/border_blue_rec"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:text="Send"
+        />
+
+    <apploads.com.innocentminds.helpers.LoadingIndicator
+        android:id="@+id/indicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="BallScaleIndicator"
+            app:indicatorColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </apploads.com.innocentminds.helpers.LoadingIndicator>
+
+</RelativeLayout>

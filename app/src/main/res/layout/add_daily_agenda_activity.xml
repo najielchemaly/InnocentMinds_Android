@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/register_background"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/imgAddActivity"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/app_margin"
+        android:src="@drawable/add_activity_icon"
+        android:padding="5dp"
+        />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:text="Cancel"
+        android:textSize="@dimen/medium_text"
+        />
+
+    <TextView
+        android:id="@+id/lblAddActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/large_text2"
+        android:textColor="@color/white"
+        android:text="Add daily agenda"
+        android:layout_below="@+id/imgAddActivity"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/viewDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/border_white_transparent_button"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_below="@+id/lblAddActivity"
+        >
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/dropdownAgenda"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            android:text=""
+            android:textSize="@dimen/medium_text2"
+            app:arrowTint="@color/white"
+            app:textTint="@color/white"
+            android:backgroundTint="@android:color/transparent"
+            app:backgroundSelector="@color/signinBlue"
+            />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewBreakfast"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/viewDropdown"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:visibility="gone"
+        >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <TextView
+                android:id="@+id/lblBreakfastTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:textSize="@dimen/large_text"
+                android:text="Breakfast"
+                />
+
+            <ImageView
+                android:id="@+id/imgBreakfastSad"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:src="@drawable/sad_face_icon"
+                />
+
+            <LinearLayout
+                android:layout_toEndOf="@+id/lblBreakfastTitle"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/app_margin"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/imgStarBreakfast1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgStarBreakfast2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgStarBreakfast3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgStarBreakfast4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtBreakfastDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lblBreakfastTitle"
+                android:layout_margin="@dimen/app_margin"
+                android:background="@color/grey"
+                android:lines="3"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:gravity="left|top"
+                android:textSize="@dimen/medium_text"
+                android:hint="Add text"
+                />
+            
+        </RelativeLayout>
+        
+        
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewLunch"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/viewDropdown"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblLunchTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:textSize="@dimen/large_text"
+                android:text="Lunch"
+                />
+
+            <ImageView
+                android:id="@+id/imgLunchSad"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:src="@drawable/sad_face_icon"
+                />
+
+            <LinearLayout
+                android:layout_toEndOf="@+id/lblLunchTitle"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/app_margin"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/imgStarLunch1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgStarLunch2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgStarLunch3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgStarLunch4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/start_unselected"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtLunchDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lblLunchTitle"
+                android:layout_margin="@dimen/app_margin"
+                android:background="@color/grey"
+                android:lines="3"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:gravity="left|top"
+                android:textSize="@dimen/medium_text"
+                android:hint="Add text"
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewPotty"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/viewDropdown"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblPotty"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:textSize="@dimen/large_text"
+                android:text="Potty"
+                />
+
+            <TextView
+                android:id="@+id/lblPottyTime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/grey"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:clickable="true"
+                android:text="Time"
+                android:textSize="@dimen/medium_text"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/app_margin"
+                android:layout_below="@+id/lblPotty"
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewNap"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/viewDropdown"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblNap"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:textSize="@dimen/large_text"
+                android:text="Nap"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/lblNap"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                >
+
+                <TextView
+                    android:id="@+id/txtNapFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:layout_weight="2"
+                    android:layout_marginRight="5dp"
+                    android:text="From :"
+                    android:textSize="@dimen/medium_text"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtNapTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="5dp"
+                    android:text="To :"
+                    android:textSize="@dimen/medium_text"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewBathroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewDropdown"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblBathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:textSize="@dimen/large_text"
+                android:text="Bathroom"
+                />
+
+            <LinearLayout
+                android:id="@+id/viewSpinners"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/lblBathroom"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/grey">
+
+                    <org.angmarch.views.NiceSpinner
+                        android:id="@+id/spinnerType1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:text="Type"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/medium_text"
+                        app:arrowTint="@color/darkGrey"
+                        app:backgroundSelector="@color/grey"
+                        app:textTint="@color/darkGrey" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/grey">
+
+                    <org.angmarch.views.NiceSpinner
+                        android:id="@+id/spinnerType2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:text="Type"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/medium_text"
+                        app:arrowTint="@color/darkGrey"
+                        app:backgroundSelector="@color/grey"
+                        app:textTint="@color/darkGrey" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtBathroomTime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/viewSpinners"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginBottom="@dimen/app_margin"
+                android:background="@color/grey"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/medium_text"
+                android:text="Time"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/app_margin"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border_white_rec"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginBottom="@dimen/app_margin"
+        android:textAllCaps="false"
+        android:textSize="@dimen/medium_text2"
+        android:textColor="@color/signinBlue"
+        android:text="Save"
+        />
+    
+</RelativeLayout>

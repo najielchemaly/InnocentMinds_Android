@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/edit_profile_background" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/app_margin"
+        android:layout_above="@+id/btnNext">
+
+        <LinearLayout
+            android:id="@+id/step1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/lblMedicalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin"
+                android:text="@string/medical_info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/xlarge_text" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                >
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/spinnerBloodType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="@string/blood_type"
+                    android:textSize="@dimen/medium_text2"
+                    app:arrowTint="@color/white"
+                    app:textTint="@color/white"
+                    android:backgroundTint="@android:color/transparent"
+                    app:backgroundSelector="@color/red"
+                    android:textColor="@color/white"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                >
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/spinnerAllergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="@string/allergy"
+                    android:textSize="@dimen/medium_text2"
+                    app:arrowTint="@color/white"
+                    app:textTint="@color/white"
+                    android:backgroundTint="@android:color/transparent"
+                    app:backgroundSelector="@color/red"
+                    android:textColor="@color/white"
+                    />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txtAllergy"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:background="@drawable/border_white_transparent_button"
+                android:gravity="top|center"
+                android:hint="@string/if_yes_specify"
+                android:maxLines="4"
+                android:lines="4"
+                android:padding="10dp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                >
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/spinnerMedication"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="@string/regular_medication"
+                    android:textSize="@dimen/medium_text2"
+                    app:arrowTint="@color/white"
+                    app:textTint="@color/white"
+                    android:backgroundTint="@android:color/transparent"
+                    app:backgroundSelector="@color/red"
+                    android:textColor="@color/white"
+                    />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txtMedication"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:background="@drawable/border_white_transparent_button"
+                android:gravity="top|center"
+                android:hint="@string/if_yes_specify"
+                android:maxLines="4"
+                android:lines="4"
+                android:padding="10dp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnDisease"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="@string/disease"
+                android:textSize="@dimen/medium_text2"
+                >
+
+            </Button>
+
+            <EditText
+                android:id="@+id/txtSpecialMedication"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:background="@drawable/border_white_transparent_button"
+                android:gravity="top|center"
+                android:hint="@string/special_medication"
+                android:imeOptions="actionDone"
+                android:maxLines="4"
+                android:lines="4"
+                android:padding="10dp"
+                android:layout_marginBottom="@dimen/app_margin"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/btnCancel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@drawable/border_white_rec"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/red" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/btnCancel"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:background="@android:color/transparent"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/viewDiseases"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:background="@color/blackOpacityNew"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="25dp"
+            >
+
+            <ListView
+                android:id="@+id/lstDiseases"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnConfirmDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/cardViewDiseases"
+            android:layout_marginTop="@dimen/app_margin"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/border_blue_rec"
+            android:textSize="@dimen/medium_text2"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="@string/confirm"
+            />
+
+        <ImageButton
+            android:id="@+id/btnCloseDiseases"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/app_margin"
+            android:background="@android:color/transparent"
+            android:src="@drawable/close_menu_icon"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

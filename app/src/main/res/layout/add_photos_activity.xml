@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/signinBlue"
+        >
+
+        <TextView
+            android:id="@+id/lblAddPhotos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/xlarge_text"
+            android:text="Add photos"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:gravity="center|right"
+            android:layout_marginRight="@dimen/app_margin"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/large_text"
+            android:text="Cancel"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gallery_background"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/header"
+        />
+
+    <GridView
+        android:id="@+id/galleryView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="150dp"
+        android:layout_below="@+id/header"
+        android:numColumns="auto_fit"
+        android:paddingTop="15dp"
+        android:verticalSpacing="15dp"
+        android:stretchMode="spacingWidthUniform"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/btnConfirm"
+        />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border_blue_rec"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/app_margin"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/medium_text2"
+        android:text="Confirm"
+        />
+
+</RelativeLayout>

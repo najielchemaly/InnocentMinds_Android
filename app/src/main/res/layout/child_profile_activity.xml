@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/edit_profile_background"
+        android:scaleType="centerCrop"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/lblEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/xlarge_text"
+                android:layout_marginTop="@dimen/app_margin"
+                android:text="Edit Child Profile"
+                />
+
+            <TextView
+                android:id="@+id/lblChildName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="for Maya Nehme"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/lblChangeChild"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Change Child"
+                android:textSize="@dimen/medium_text"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/app_margin"
+                >
+
+                <ImageButton
+                    android:id="@+id/btnChildImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/take_photo_background"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/lblChildImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Child Image"
+                    android:textSize="@dimen/medium_text"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:inputType="textCapWords"
+                android:textSize="@dimen/medium_text2"
+                android:lines="1"
+                android:imeOptions="actionNext"
+                android:hint="Name"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/txtFather"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:textSize="@dimen/medium_text2"
+                android:imeOptions="actionNext"
+                android:hint="Fathers Name"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/txtGender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text2"
+                android:textColorHint="@color/white"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:imeOptions="actionNext"
+                android:hint="Gender"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/txtLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/medium_text2"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:imeOptions="actionNext"
+                android:hint="Language at home"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/txtProgram"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:textSize="@dimen/medium_text2"
+                android:background="@drawable/border_white_transparent_button"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:imeOptions="actionNext"
+                android:hint="Program"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/border_white_transparent_button"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:imeOptions="actionDone"
+                android:hint="Entry date"
+                android:gravity="center"
+                android:textSize="@dimen/medium_text2"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

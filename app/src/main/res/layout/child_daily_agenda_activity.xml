@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/register_background"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:background="@android:color/transparent"
+        android:src="@drawable/arrow_blue"
+        android:tint="@color/white"
+        android:scaleType="centerCrop"
+        android:padding="14dp"
+        android:rotation="180"
+        />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@android:color/transparent"
+        android:textSize="@dimen/medium_text2"
+        android:textAllCaps="false"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ImageView
+        android:id="@+id/imgChild"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/boy_avatar"
+        />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgChild"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/app_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewAddActivity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_below="@+id/txtName"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        app:cardCornerRadius="@dimen/app_margin"
+        app:cardElevation="5dp"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/viewNewActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:src="@drawable/plus_filled_blue"
+                android:scaleType="centerCrop"
+                android:padding="8dp"
+                />
+
+            <TextView
+                android:id="@+id/lblAddActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add Daily Agenda"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/darkBlue"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewNoActivity"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/txtName"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:visibility="visible"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtNoActivityTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:textSize="@dimen/medium_text2"
+                android:textColor="@color/darkGrey"
+                android:text="No daily agenda yet"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/txtNoActivityDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_centerInParent="true"
+                android:lines="2"
+                android:textSize="15sp"
+                android:textColor="@color/darkGrey"
+                android:text="You haven't logged any daily agenda for this student today"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btnNoActivityAdd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:textColor="@color/signinBlue"
+                android:textAllCaps="false"
+                android:text="Add"
+                android:textSize="@dimen/medium_text2"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/lstActivities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:layout_below="@+id/viewAddActivity"
+        android:layout_above="@+id/viewSendMessage"
+        android:visibility="gone"
+        android:divider="@null"/>
+
+    <LinearLayout
+        android:id="@+id/viewSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/send_message_icon"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/txtSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/darkBlue"
+            android:text="Send parents a message"
+            />
+
+    </LinearLayout>
+
+    <apploads.com.innocentminds.helpers.LoadingIndicator
+        android:id="@+id/indicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="BallScaleIndicator"
+            app:indicatorColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </apploads.com.innocentminds.helpers.LoadingIndicator>
+
+</RelativeLayout>

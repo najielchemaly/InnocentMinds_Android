@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/red">
+
+        <TextView
+            android:id="@+id/lblDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/xlarge_text"
+            android:text="@string/dashboard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_margin"
+            />
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/app_margin"
+            android:src="@drawable/message_icon"
+            android:scaleType="centerCrop"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/txtNotification"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:text="21"
+            android:background="@drawable/circle_shape_opacity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lblDashboard"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/boy_avatar"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toEndOf="@+id/imgProfile"
+                android:layout_marginLeft="4dp"
+                android:gravity="center|left"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblViewing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:text="@string/viewing"/>
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="Angy Chemaly"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtChangeChild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/border_transparent_edittext"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/white"
+                    android:text="@string/change_child"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewHeader"
+        android:src="@drawable/gallery_background"
+        android:scaleType="centerCrop"
+        />
+
+    <ListView
+        android:id="@+id/listDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewHeader"
+        android:layout_marginTop="-45dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/viewNoActivities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewHeader"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/empty"
+            />
+
+        <TextView
+            android:id="@+id/txtNoActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="There are no activites yet for"
+            />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/border_red_rounded"
+        android:src="@drawable/float_menu"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/viewOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/viewMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/viewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/viewChangeChild"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="@color/blackOpacity"
+        >
+
+        <TextView
+            android:id="@+id/lblChangeChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/xlarge_text"
+            android:text="@string/change_child"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_margin"
+            />
+
+        <ListView
+            android:id="@+id/lstChilds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:layout_below="@+id/lblChangeChild"
+            android:layout_above="@+id/btnCloseChilds"
+            android:layout_marginTop="@dimen/app_margin"
+            />
+
+        <Button
+            android:id="@+id/btnCloseChilds"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/app_margin"
+            android:textSize="@dimen/medium_text"
+            android:background="@android:color/transparent"
+            android:textColor="@color/white"
+            android:text="Close"
+            android:textAllCaps="false"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

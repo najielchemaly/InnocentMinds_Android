@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/edit_profile_background"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/lblEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/xlarge_text"
+            android:text="Edit profile"
+            />
+
+        <EditText
+            android:id="@+id/txtFullName"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@color/white"
+            android:lines="1"
+            android:background="@drawable/textfield_border_top"
+            android:hint="Fullname"
+            android:gravity="center"
+            android:textSize="@dimen/medium_text2"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/txtPhone"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@color/white"
+            android:lines="1"
+            android:background="@drawable/textfield_border_white"
+            android:hint="Phone number"
+            android:gravity="center"
+            android:textSize="@dimen/medium_text2"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@color/white"
+            android:lines="1"
+            android:background="@drawable/textfield_border_white"
+            android:hint="Email"
+            android:gravity="center"
+            android:textSize="@dimen/medium_text2"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/txtAddress"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-1dp"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone"
+            android:lines="1"
+            android:textCursorDrawable="@color/white"
+            android:background="@drawable/textfield_border_bot"
+            android:hint="Address"
+            android:gravity="center"
+            android:textSize="@dimen/medium_text2"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/large_text"
+            android:background="@drawable/border_white_rec"
+            android:textColor="@color/red"
+            android:textSize="@dimen/medium_text2"
+            android:text="Save Changes"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textSize="@dimen/large_text"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        />
+
+    <apploads.com.innocentminds.helpers.LoadingIndicator
+        android:id="@+id/indicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="BallScaleIndicator"
+            app:indicatorColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </apploads.com.innocentminds.helpers.LoadingIndicator>
+
+</RelativeLayout>

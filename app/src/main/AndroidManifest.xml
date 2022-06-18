@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="apploads.com.innocentminds">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".SelectLanguageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".pickuser.PickUserActivity" />
+        <activity android:name=".signup.SignupChildActivity" />
+        <activity android:name=".signin.SigninActivity" />
+        <activity android:name=".homepage.HomepageActivity" />
+        <activity android:name=".parent.ChatActivity" />
+        <activity android:name=".parent.ChangePasswordActivity" />
+        <activity android:name=".parent.GalleryActivity" />
+        <activity android:name=".parent.EditMyProfileActivity" />
+        <activity android:name=".parent.ContactusActivity" />
+        <activity android:name=".signup.EditChildProfileStepOneActivity" />
+        <activity android:name=".signup.EditChildProfileStepTwoActivity" />
+        <activity android:name=".signup.EditChildProfileStepThreeActivity" />
+        <activity android:name=".signup.EditChildProfileStepFourActivity" />
+        <activity android:name=".signup.EditChildProfileStepFiveActivity" />
+        <activity android:name=".parent.PaymentsFeesActivity" />
+        <activity android:name=".aboutus.AboutusActivity" />
+        <activity android:name=".nurse.ClassesActivity" />
+        <activity android:name=".nurse.ChildListActivity" />
+        <activity android:name=".nurse.ChildActivity" />
+        <activity android:name=".teacher.TeacherActivity" />
+        <activity android:name=".teacher.TeacherActivitiesActivity" />
+        <activity android:name=".teacher.ChildDailyAgendaActivity" />
+        <activity android:name=".teacher.AddAgendaActivity" />
+        <activity android:name=".teacher.AddDailyAgendaActivity" />
+        <activity android:name=".teacher.SelectChildrenActivity" />
+        <activity android:name=".SigninAsGuestActivity" />
+        <activity android:name=".teacher.AddPhotosActivity" />
+        <activity android:name=".nurse.SearchChildListActivity" />
+        <activity android:name=".events.EventsActivity" />
+        <activity android:name=".events.EventsDetailsActivity" />
+        <activity android:name=".loading.LoadingActivity" />
+
+        <activity
+            android:name=".teacher.SendMessageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Theme.Transparent" />
+
+        <service
+            android:name=".firebase.MyFirebaseMessaginService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

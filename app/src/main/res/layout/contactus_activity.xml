@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/orange">
+
+            <TextView
+                android:id="@+id/lblContactus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/contact_us"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text2" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@android:color/transparent"
+                android:gravity="center|right"
+                android:text="Close"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text" />
+
+            <ImageButton
+                android:id="@+id/btnLogout"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@android:color/transparent"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logout_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/viewBranches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtBliss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Bliss"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/medium_text2" />
+
+                <TextView
+                    android:id="@+id/txtHazmieh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:text="Hazmieh"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="@dimen/medium_text2" />
+
+                <TextView
+                    android:id="@+id/txtSanayeh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Sanayeh"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="@dimen/medium_text2" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lstPhoneNumbers"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_below="@+id/viewBranches"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:paddingBottom="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/viewLocateus"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/lstPhoneNumbers"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:background="@drawable/border_blue_view"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/imgLocation"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/locate_us_icon" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/arrow_blue" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_toEndOf="@+id/imgLocation"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Come visit us"
+                        android:textColor="@color/signinBlue"
+                        android:textSize="@dimen/medium_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Locate us"
+                        android:textColor="@color/signinBlue"
+                        android:textSize="@dimen/large_text2"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/viewMessage"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_below="@+id/viewLocateus"
+                android:background="@drawable/red_radius_view"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you have any questions ?"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send us a message"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/large_text2"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewContactUs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:alpha="0"
+        android:background="@color/blackOpacity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/txtFirstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/border_white_button"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text2"
+                    android:lines="1"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/firstname"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/txtLastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/border_white_button"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text2"
+                    android:layout_marginTop="10dp"
+                    android:lines="1"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/lastname"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/border_white_button"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text2"
+                    android:layout_marginTop="10dp"
+                    android:lines="1"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/email"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/txtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/border_white_button"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text2"
+                    android:layout_marginTop="10dp"
+                    android:lines="1"
+                    android:inputType="phone"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/phone_number"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/txtBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/border_white_button"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text2"
+                    android:layout_marginTop="10dp"
+                    android:lines="1"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/Branch"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/txtInquiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/border_white_button"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text2"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:imeOptions="actionDone"
+                    android:lines="8"
+                    android:hint="@string/Inquiry"
+                    android:gravity="center|top"
+                    android:padding="@dimen/app_margin"
+                    />
+
+                <Button
+                    android:id="@+id/btnSendMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:background="@drawable/border_white_rec"
+                    android:textColor="@color/red"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/medium_text2"
+                    android:text="@string/send_message"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnCloseViewContactUs"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textSize="@dimen/medium_text2"
+            android:text="@string/close"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+    <apploads.com.innocentminds.helpers.LoadingIndicator
+        android:id="@+id/indicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="BallScaleIndicator"
+            app:indicatorColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </apploads.com.innocentminds.helpers.LoadingIndicator>
+
+</RelativeLayout>

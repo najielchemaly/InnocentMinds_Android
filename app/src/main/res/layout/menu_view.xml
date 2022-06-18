@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblHello"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        android:text="@string/hello_there"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/lblSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/lblHello"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="@string/what_to_do"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/lblSubTitle"
+        android:layout_weight="10"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:clipChildren="false"
+        android:layout_marginBottom="15dp"
+        android:clipToPadding="false"
+        >
+
+        <TextView
+            android:id="@+id/txtAddChild"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:paddingTop="15dp"
+            android:gravity="center|top"
+            android:text="@string/add_a_child"
+            android:background="@drawable/border_blue_rec"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text2"
+            android:textStyle="bold"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginRight="-2dp"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/border_white_rec"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/txtEditMyProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/edit_my_profile"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtEditChildProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/edit_child_profile"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/change_password"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/see_some_images"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtFoodCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="Food Calendar"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="Events"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtPayments"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/payments_fees"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtAboutus"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/about_us"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/txtSelectLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/select_language"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    android:visibility="visible"
+                    />
+
+
+                <TextView
+                    android:id="@+id/txtContactus"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/contact_us"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:alpha="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/txtLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="@string/logout"
+                    />
+
+            </LinearLayout>
+            
+        </ScrollView>
+        
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="7dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/close_menu_icon"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="2dp"
+        />
+
+</LinearLayout>
